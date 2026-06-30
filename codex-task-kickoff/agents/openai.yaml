@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex任务启动"
+  short_description: "Clarify goals sources outputs checks boundaries before work"
+  default_prompt: "Use $codex-task-kickoff to clarify the goal, sources, output, checks, and boundaries before execution."
