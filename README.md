@@ -27,13 +27,22 @@
 
 ```bash
 git clone https://github.com/AuClarke/codex-skill-task-kickoff.git
-ln -s "$PWD/codex-skill-task-kickoff/codex-task-kickoff" ~/.codex/skills/codex-task-kickoff
+cd codex-skill-task-kickoff
+mkdir -p ~/.codex/skills
+ln -s "$PWD/codex-task-kickoff" ~/.codex/skills/codex-task-kickoff
 ```
 
 如果已经在仓库目录内：
 
 ```bash
+mkdir -p ~/.codex/skills
 ln -s "$PWD/codex-task-kickoff" ~/.codex/skills/codex-task-kickoff
+```
+
+## 卸载
+
+```bash
+rm ~/.codex/skills/codex-task-kickoff
 ```
 
 ## 如何触发
@@ -83,6 +92,24 @@ Use $codex-task-kickoff 帮我先对齐这个任务，再开始做。
 - 文件在哪里；
 - 检查了什么；
 - 还有什么风险或需要用户确认。
+
+## 使用示例
+
+用户说：
+
+```text
+帮我做一个旅行攻略 PPT，要有小红书链接、图片和每天安排。
+```
+
+Codex 应该先压缩成启动框架：
+
+```text
+目标：制作可交互检查的旅行攻略 PPT
+资料源：用户原始行程、小红书、住宿/交通信息
+输出形式：.pptx + 检查记录
+验收标准：能打开预览；链接可点；每天行程不漏项
+边界：不改全局配置；登录/验证码由用户处理
+```
 
 ## 目录结构
 
